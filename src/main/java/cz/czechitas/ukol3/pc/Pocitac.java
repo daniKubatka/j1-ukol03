@@ -1,5 +1,7 @@
 package cz.czechitas.ukol3.pc;
 
+import java.rmi.ServerError;
+
 public class Pocitac {
 
     Procesor cpu;
@@ -55,6 +57,40 @@ public class Pocitac {
         if (jeZapnuty){
             jeZapnuty = false;
             System.out.println("Pocitac se vypnul.");
+        }
+    }
+
+    public void vytvorSouborOVelikosti(long velikost){
+        if (jeZapnuty){
+            long volneMistoNaDisku = pevnyDisk.getKapacitaDisku() - pevnyDisk.getVyuziteMisto();
+
+            if(volneMistoNaDisku >= velikost) {
+                pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() + velikost);
+                System.out.println("Vytvoril se soubor o velikosti " + velikost + ". Na disku je vyuzite misto " + pevnyDisk.getVyuziteMisto() + " bajtu z celkove kapacity " + pevnyDisk.getKapacitaDisku() + " bajtu.");
+            }
+            else {
+                System.err.println("Na disku neni dostatek mista.");
+            }
+        }
+
+        else {
+            System.err.println("Nelze vytvaret soubory pokud je pocitac vypnuty!");
+        }
+    }
+
+    public void vymazSouborOVelikosti(long velikost){
+        if (jeZapnuty){
+            if(pevnyDisk.getVyuziteMisto() - velikost > 0) {
+                pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() - velikost);
+                System.out.println("Smazal se soubor o velikosti " + velikost + ". Na disku je vyuzite misto " + pevnyDisk.getVyuziteMisto() + " bajtu z celkove kapacity " + pevnyDisk.getKapacitaDisku() + " bajtu.");
+            }
+            else {
+                System.err.println("Do minusu nemuzeme.");
+            }
+        }
+
+        else {
+            System.err.println("Nelze mazat soubory pokud je pocitac vypnuty!");
         }
     }
 

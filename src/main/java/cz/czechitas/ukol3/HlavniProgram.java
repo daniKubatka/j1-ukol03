@@ -11,6 +11,7 @@ import cz.czechitas.ukol3.pc.Procesor;
 public class HlavniProgram {
 
     public static void main(String... args) {
+        //cast 1
         Pocitac daniPocitac = new Pocitac();
 
         daniPocitac.zapniSe();
@@ -38,11 +39,23 @@ public class HlavniProgram {
         daniPocitac.vypniSe();
         daniPocitac.vypniSe();
 
+        //cast2
+        daniPocitac.vytvorSouborOVelikosti(1_500_001_210L);
 
+        daniPocitac.zapniSe();
 
+        System.out.println(daniPocitac);
 
+        daniPocitac.vytvorSouborOVelikosti(1_500_001_210L);
+        daniPocitac.vytvorSouborOVelikosti(1_500_001_210L);
 
+        daniPocitac.vypniSe();
 
+        daniPocitac.vymazSouborOVelikosti(5_830_156_234L);
+
+        daniPocitac.zapniSe();
+        daniPocitac.vymazSouborOVelikosti(5_830_156_234L);
+        daniPocitac.vymazSouborOVelikosti(5_830_156_234L);
 
     }
 

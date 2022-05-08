@@ -13,7 +13,7 @@ public class Disk {
         this.kapacitaDisku = kapacitaDisku;
     }
 
-    public long getVyziteMisto() {
+    public long getVyuziteMisto() {
         return vyziteMisto;
     }
 
