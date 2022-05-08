@@ -38,9 +38,7 @@ public class Pocitac {
 
     public boolean jeZapnuty = false;
 
-    //Aby bylo možné počítač zapnout, musí mít procesor, paměť a disk. Při pokusu o zapnutí počítače tedy musíte zkontrolovat, zda se daná část v počítači nachází. Poku dnějaké chybí (např. ram == null), metoda pro zapnutí vypíše do konzle chybovou hlášku a metoda se ukončí (počítač se nezapne).
-
-    public void zapnitSe(){
+    public void zapniSe(){
         if (this.pevnyDisk == null || this.cpu == null || this.ram == null){
             System.err.println("Pocitacu chybeji komponenty.");
         }
@@ -49,7 +47,14 @@ public class Pocitac {
         }
         else {
             jeZapnuty = true;
-            System.out.println("Zapnul jsem pocitac.");
+            System.out.println("Pocitac se zapnul.");
+        }
+    }
+
+    public void vypniSe(){
+        if (jeZapnuty){
+            jeZapnuty = false;
+            System.out.println("Pocitac se vypnul.");
         }
     }
 

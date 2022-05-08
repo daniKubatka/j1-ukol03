@@ -13,7 +13,7 @@ public class HlavniProgram {
     public static void main(String... args) {
         Pocitac daniPocitac = new Pocitac();
 
-        daniPocitac.zapnitSe();
+        daniPocitac.zapniSe();
 
         Procesor daniProcesor = new Procesor();
         daniProcesor.setRychlost(320_000_000_000L);
@@ -32,9 +32,11 @@ public class HlavniProgram {
 
         System.out.println(daniPocitac);
 
-        daniPocitac.zapnitSe();
-        daniPocitac.zapnitSe();
+        daniPocitac.zapniSe();
+        daniPocitac.zapniSe();
 
+        daniPocitac.vypniSe();
+        daniPocitac.vypniSe();
 
 
 
