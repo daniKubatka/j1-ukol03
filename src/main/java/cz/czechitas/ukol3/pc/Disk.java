@@ -2,10 +2,8 @@ package cz.czechitas.ukol3.pc;
 
 public class Disk {
 
-    private long kapacitaDisku = 10_498_617_344L;
+    private long kapacitaDisku;
     private long vyziteMisto;
-
-    private long nevuziteMisto = kapacitaDisku - vyziteMisto;
 
     public long getKapacitaDisku() {
         return kapacitaDisku;
@@ -19,13 +17,12 @@ public class Disk {
         return vyziteMisto;
     }
 
-    public void setVyziteMisto(long vyziteMisto) {
-        this.vyziteMisto = vyziteMisto;
+    public void setVyuziteMisto(long vyuzitemisto) {
+        this.vyziteMisto = vyuzitemisto;
     }
 
     @Override
     public String toString() {
-        return "Disk ma kapacitu " + kapacitaDisku + " bajtu" +
-                "z toho vyuzitych " + vyziteMisto + " bajtu." + " Na disku zbyva " + nevuziteMisto + " bajtu";
+        return "Disk ma kapacitu " + kapacitaDisku + " bajtu, z toho vyuzitych " + vyziteMisto + " bajtu.";
     }
 }

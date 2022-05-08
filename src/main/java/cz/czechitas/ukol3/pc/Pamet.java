@@ -2,7 +2,7 @@ package cz.czechitas.ukol3.pc;
 
 public class Pamet {
 
-    long kapacita = 16_000_000_000L;
+    long kapacita;
 
     public long getKapacita() {
         return kapacita;
