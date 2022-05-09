@@ -23,13 +23,18 @@ public class HlavniProgram {
         Pamet daniPamet = new Pamet();
         daniPamet.setKapacita(16_000_000_000L);
 
-        Disk daniDisk = new Disk();
-        daniDisk.setKapacitaDisku(10_498_617_344L);
-        daniDisk.setVyuziteMisto(7_657_362_891L);
+        Disk daniDisk1 = new Disk();
+        daniDisk1.setKapacitaDisku(10_498_617_344L);
+        daniDisk1.setVyuziteMisto(7_657_362_891L);
+
+        Disk daniDisk2 = new Disk();
+        daniDisk2.setKapacitaDisku(9_500_000_000L);
+        daniDisk2.setVyuziteMisto(0L);
 
         daniPocitac.setCpu(daniProcesor);
         daniPocitac.setRam(daniPamet);
-        daniPocitac.setPevnyDisk(daniDisk);
+        daniPocitac.setPevnyDisk1(daniDisk1);
+        daniPocitac.setPevnyDisk2(daniDisk2);
 
         System.out.println(daniPocitac);
 
@@ -48,6 +53,7 @@ public class HlavniProgram {
 
         daniPocitac.vytvorSouborOVelikosti(1_500_001_210L);
         daniPocitac.vytvorSouborOVelikosti(1_500_001_210L);
+        daniPocitac.vytvorSouborOVelikosti(10_500_001_210L);
 
         daniPocitac.vypniSe();
 
