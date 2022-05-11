@@ -4,12 +4,10 @@ import java.rmi.ServerError;
 
 public class Pocitac {
 
-    Procesor cpu;
-    Pamet ram;
-    Disk pevnyDisk1;
-    Disk pevnyDisk2;
-
-
+    private Procesor cpu;
+    private Pamet ram;
+    private Disk pevnyDisk1;
+    private Disk pevnyDisk2;
 
     @Override
     public String toString() {
